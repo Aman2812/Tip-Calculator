@@ -1,0 +1,97 @@
+body {
+  width: 100%;
+}
+
+.root {
+  margin: 10px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.root > div {
+  padding: 15px;
+}
+
+.calc-div {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.calc-div p {
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+.calc-div p:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.form-control {
+  text-align: center;
+}
+
+.input-group-text {
+  font-size: 32px;
+  font-weight: 600;
+  padding: 0 0.75rem;
+}
+
+.amount-div {
+  width: 100%;
+}
+
+.amount-div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.amount-div div p:nth-of-type(1) {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.amount-div div span {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#tip-amount {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
+}
+#total-amount {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+/* To remove default increment decrement arrow in field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*  */
+@media only screen and (max-width: 600px) {
+  .root {
+    flex-direction: column;
+    width: fit-content;
+  }
+  #tip-amount {
+    font-size: 20px;
+  }
+  #total-amount {
+    font-size: 20px;
+  }
+  .calc-div {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
