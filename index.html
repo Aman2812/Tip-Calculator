@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./tip_calculator.css">
+</head>
+<body>
+
+	<div class="root">
+		<div class="calc-div">
+			<p>Bill</p>
+			<div class="input-group mb-3">
+			<input class="form-control" type="number" name="bill" onchange="amount_handler()">
+		</div>
+			<p>Tip %</p>
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+    				<span class="input-group-text"  onclick="tip_decrement()">-</span>
+  				</div>
+				<input id="tip-input" class="form-control" type="number" name="tip" onchange="amount_handler()">
+				<div class="input-group-append">
+    				<span class="input-group-text" onclick="tip_increment()">+</span>
+  				</div>
+			</div>
+			<p>Number of people</p>
+			<div class="input-group mb-3">
+  				<div class="input-group-prepend">
+					<span class="input-group-text" onclick="people_decrement()">-</span>
+  				</div>
+				<input id='people-input' class="form-control"  type="number" name="people" onchange="amount_handler()">
+  			<div class="input-group-append">
+    			<span class="input-group-text" onclick="people_increment()">+</span>
+  				</div>
+			</div>	
+			</div>
+		<div class="amount-div">
+			<div>
+			<p>Tip <br><span>per person</span></p>
+			<p id="tip-amount"></p>	
+			</div>
+			<div>	
+			<p>Total <br><span>per person</span></p>
+			<p id="total-amount"></p>	
+			</div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="tip_calculator.js"></script>
+</body>
+</html>
